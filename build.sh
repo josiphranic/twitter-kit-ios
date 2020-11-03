@@ -3,13 +3,6 @@
 set -e
 
 ## Build TwitterKit.framework - x86_64
-xcodebuild \
-    -project TwitterKit/TwitterKit.xcodeproj \
-    -scheme TwitterKit -configuration Release \
-    -sdk "iphonesimulator" \
-    HEADER_SEARCH_PATHS="$(pwd)/TwitterCore/iphonesimulator/Headers $(pwd)/TwitterCore/iphonesimulator/PrivateHeaders"  \
-    CONFIGURATION_BUILD_DIR=./iphonesimulator \
-    clean build
 
 ## From: https://developer.apple.com/library/archive/qa/qa1940/_index.html
 # If code signing fails with the error "resource fork, Finder information, or similar detritus not allowed."
