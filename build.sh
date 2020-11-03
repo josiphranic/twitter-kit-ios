@@ -31,7 +31,7 @@ xcodebuild \
 rm -rf iOS
 mkdir -p iOS
 cp -r TwitterKit/iphoneos/TwitterKit.framework/ iOS/TwitterKit.framework
-lipo -create -output iOS/TwitterKit.framework/TwitterKit TwitterKit/iphoneos/TwitterKit.framework/TwitterKit TwitterKit/iphonesimulator/TwitterKit.framework/TwitterKit
+lipo -create -output iOS/TwitterKit.framework/TwitterKit TwitterKit/iphoneos/TwitterKit.framework/TwitterKit
 lipo -archs iOS/TwitterKit.framework/TwitterKit
 
 ## Zip them into TwitterKit.zip
